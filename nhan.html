@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xe Nhà Riêng Tư – 0938 547 985</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-dark: #3a4d32;
+  --green-mid: #5b7052;
+  --green-light: #a8c490;
+  --green-pale: #c8d9b8;
+  --cream: #f0f5ec;
+  --text-muted: rgba(240,245,236,0.65);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #2a3a24;
+  font-family: 'Jost', sans-serif;
+  color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(42,58,36,0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(168,196,144,0.12);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cream);
+}
+.nav-logo span { color: var(--green-light); font-style: italic; }
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--cream); transform: translateY(-1px); }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 5vw 80px;
+  background:
+    radial-gradient(ellipse 80% 60% at 40% 50%, rgba(91,112,82,0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 70% at 80% 30%, rgba(168,196,144,0.06) 0%, transparent 60%),
+    #2a3a24;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(168,196,144,0.12);
+  border: 1px solid rgba(168,196,144,0.28);
+  color: var(--green-pale);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 2px;
+  margin-bottom: 30px;
+  width: fit-content;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge::before { content: '◆'; font-size: 7px; color: var(--green-light); }
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(46px, 8vw, 90px);
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 22px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+.hero-title em { display: block; color: var(--green-light); font-style: italic; }
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 440px;
+  line-height: 1.7;
+  margin-bottom: 44px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.btn-primary:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 16px 28px;
+  border-radius: 2px;
+  border: 1px solid rgba(168,196,144,0.35);
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.btn-secondary:hover { background: rgba(168,196,144,0.1); border-color: rgba(168,196,144,0.6); }
+
+.zalo-icon-badge {
+  background: #0068ff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.hero-car {
+  position: absolute;
+  right: 4vw;
+  bottom: 8%;
+  font-size: clamp(100px, 18vw, 200px);
+  filter: drop-shadow(0 20px 48px rgba(0,0,0,0.5)) drop-shadow(0 0 80px rgba(168,196,144,0.12));
+  z-index: 0;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 1;
+  animation: fadeUp 1s 0.8s ease both;
+}
+.scroll-dot {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, rgba(168,196,144,0.6), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ─── STATS ─── */
+.stats-bar {
+  background: rgba(91,112,82,0.35);
+  border-top: 1px solid rgba(168,196,144,0.13);
+  border-bottom: 1px solid rgba(168,196,144,0.13);
+  padding: 28px 5vw;
+}
+.stats-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--green-light);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ─── SECTION ─── */
+section { padding: 80px 5vw; position: relative; z-index: 1; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green-light);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--green-light); }
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+.section-heading em { color: var(--green-light); font-style: italic; }
+
+/* ─── SERVICES ─── */
+.services-section { background: rgba(0,0,0,0.12); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+}
+.service-card {
+  background: rgba(91,112,82,0.25);
+  border: 1px solid rgba(168,196,144,0.1);
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(168,196,144,0.1), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); border-color: rgba(168,196,144,0.35); }
+.service-card:hover::before { opacity: 1; }
+.service-card-accent {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--green-light), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-card:hover .service-card-accent { opacity: 1; }
+.service-card-icon { font-size: 36px; margin-bottom: 18px; display: block; }
+.service-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.service-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+/* ─── PRICE BANNER ─── */
+.price-section {
+  background: var(--green-mid);
+  padding: 48px 5vw;
+  border-top: 1px solid rgba(168,196,144,0.15);
+  border-bottom: 1px solid rgba(168,196,144,0.15);
+}
+.price-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.price-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 8px; }
+.price-headline { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; }
+.price-headline em { color: var(--green-light); font-style: italic; }
+.price-desc { font-size: 13px; color: var(--text-muted); margin-top: 6px; }
+.price-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cream);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+.price-cta:hover { background: var(--green-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+/* ─── CONTACT ─── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+
+.phone-card {
+  background: var(--green-mid);
+  border: 1px solid rgba(168,196,144,0.2);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.phone-card::after {
+  content: '📞';
+  position: absolute;
+  bottom: -20px; right: -10px;
+  font-size: 150px;
+  opacity: 0.05;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+.phone-label { font-size: 10px; font-weight: 700; color: var(--green-light); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+.phone-number-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.phone-note { font-size: 12px; color: var(--text-muted); margin-bottom: 32px; }
+.phone-buttons { display: flex; flex-direction: column; gap: 12px; }
+
+.btn-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.btn-call:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+.btn-zalo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0,104,255,0.18);
+  color: #7ab8ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(100,160,255,0.3);
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.btn-zalo:hover { background: rgba(0,104,255,0.35); border-color: rgba(100,160,255,0.6); transform: translateY(-2px); }
+
+.info-card {
+  background: rgba(91,112,82,0.2);
+  border: 1px solid rgba(168,196,144,0.1);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info-block-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green-light);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(168,196,144,0.18);
+}
+.province-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.province-tag {
+  background: rgba(168,196,144,0.1);
+  border: 1px solid rgba(168,196,144,0.22);
+  color: rgba(240,245,236,0.8);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 13px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.province-tag:hover { background: rgba(168,196,144,0.2); border-color: rgba(168,196,144,0.45); color: var(--cream); }
+.features-list { display: flex; flex-direction: column; gap: 10px; }
+.feat { display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(240,245,236,0.8); font-weight: 500; }
+.feat-check {
+  width: 22px; height: 22px;
+  background: rgba(168,196,144,0.15);
+  border: 1px solid rgba(168,196,144,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green-light);
+  font-size: 10px; font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 32px 5vw;
+  text-align: center;
+  border-top: 1px solid rgba(168,196,144,0.1);
+}
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+.footer-logo span { color: var(--green-light); font-style: italic; }
+.footer-note { font-size: 11px; color: rgba(240,245,236,0.3); }
+
+/* ─── FLOATING ─── */
+.float-cta {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  transition: all 0.25s;
+  white-space: nowrap;
+  animation: popIn 0.4s ease both;
+}
+.float-call { background: var(--green-light); color: var(--green-dark); animation-delay: 0.9s; }
+.float-call:hover { background: var(--cream); transform: translateY(-2px) scale(1.02); }
+.float-zalo { background: #0068ff; color: #fff; animation-delay: 1.05s; }
+.float-zalo:hover { background: #1a7aff; transform: translateY(-2px) scale(1.02); }
+.float-icon { font-size: 15px; }
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .hero-car { opacity: 0.12; right: -20px; }
+  .price-inner { flex-direction: column; align-items: flex-start; }
+  .phone-card, .info-card { padding: 36px 28px; }
+}
+@media (max-width: 480px) {
+  .float-btn span { display: none; }
+  .float-btn { padding: 14px; border-radius: 50%; width: 50px; height: 50px; justify-content: center; }
+  .float-icon { font-size: 20px; }
+  .nav-cta span { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Xe Nhà <span>Riêng Tư</span></div>
+  <a href="tel:0938547985" class="nav-cta">📞 <span>Gọi ngay</span></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Dịch vụ xe riêng tư TP.HCM</div>
+    <h1 class="hero-title">
+      Gọi là đến —
+      <em>Nhanh, An toàn,<br>Tận tâm!</em>
+    </h1>
+    <p class="hero-sub">Xe nhà sạch sẽ, riêng tư, đưa đón tận nơi. Giá cả bình dân, minh bạch, không phát sinh chi phí.</p>
+    <div class="hero-actions">
+      <a href="tel:0938547985" class="btn-primary">📞 Gọi 0938 547 985</a>
+      <a href="https://zalo.me/0938547985" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <span class="zalo-icon-badge">Z</span> Nhắn Zalo ngay
+      </a>
+    </div>
+  </div>
+  <div class="hero-car">🚗</div>
+  <div class="scroll-hint">
+    <div class="scroll-dot"></div>
+    Khám phá
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar reveal">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Sẵn sàng</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Minh bạch</div></div>
+    <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Tỉnh phục vụ</div></div>
+    <div class="stat-item"><div class="stat-num">0đ</div><div class="stat-label">Phụ thu ẩn</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Dịch vụ</div>
+    <h2 class="section-heading reveal">Xe phục vụ <em>trong ngày</em></h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-card-icon">🏥</span>
+        <div class="service-card-name">Đi khám bệnh</div>
+        <p class="service-card-desc">Đưa đón tận nơi, chờ trong suốt quá trình khám. An tâm trọn hành trình, không lo phải tự xoay sở.</p>
+        <div class="service-card-accent"></div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.1s">
+        <span class="service-card-icon">✈️</span>
+        <div class="service-card-name">Sân bay – Ga tàu</div>
+        <p class="service-card-desc">Đón tiễn đúng giờ, không lo trễ chuyến. Theo dõi lịch bay, điều chỉnh linh hoạt theo thực tế.</p>
+        <div class="service-card-accent"></div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.2s">
+        <span class="service-card-icon">🎉</span>
+        <div class="service-card-name">Đám tiệc – Thăm thân – Công việc</div>
+        <p class="service-card-desc">Sáng đi chiều về, chờ tại nơi nếu cần. Linh hoạt thời gian, phù hợp mọi lịch trình.</p>
+        <div class="service-card-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE BANNER -->
+<div class="price-section reveal">
+  <div class="price-inner">
+    <div>
+      <div class="price-eyebrow">Cam kết giá cả</div>
+      <div class="price-headline">Giá bình dân, <em>thỏa thuận rõ ràng</em></div>
+      <div class="price-desc">Báo giá trước chuyến. Không phụ thu. Không phát sinh.</div>
+    </div>
+    <a href="tel:0938547985" class="price-cta">💬 Hỏi giá ngay</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section>
+  <div class="section-inner">
+    <div class="section-label reveal">Liên hệ</div>
+    <h2 class="section-heading reveal">Đặt xe <em>ngay hôm nay</em></h2>
+    <div class="contact-grid">
+      <div class="phone-card reveal">
+        <div class="phone-label">Hotline 24/7</div>
+        <div class="phone-number-display">0938 547 985</div>
+        <div class="phone-note">Gọi điện hoặc nhắn Zalo — phản hồi ngay</div>
+        <div class="phone-buttons">
+          <a href="tel:0938547985" class="btn-call">📞 Gọi điện ngay</a>
+          <a href="https://zalo.me/0938547985" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+            <span class="zalo-icon-badge">Z</span> Nhắn Zalo
+          </a>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div>
+          <div class="info-block-title">📍 Khu vực phục vụ</div>
+          <div class="province-tags">
+            <span class="province-tag">TP. Hồ Chí Minh</span>
+            <span class="province-tag">Long An</span>
+            <span class="province-tag">Tiền Giang</span>
+            <span class="province-tag">Bình Dương</span>
+            <span class="province-tag">Đồng Nai</span>
+            <span class="province-tag">Vũng Tàu</span>
+            <span class="province-tag">& nhiều tỉnh khác</span>
+          </div>
+        </div>
+        <div>
+          <div class="info-block-title">✅ Cam kết dịch vụ</div>
+          <div class="features-list">
+            <div class="feat"><div class="feat-check">✓</div>Sáng đi chiều về, đúng lịch trình</div>
+            <div class="feat"><div class="feat-check">✓</div>Chờ tại điểm đến không tính giờ</div>
+            <div class="feat"><div class="feat-check">✓</div>Xe sạch sẽ, điều hòa mát lạnh</div>
+            <div class="feat"><div class="feat-check">✓</div>Không phụ thu, giá cố định</div>
+            <div class="feat"><div class="feat-check">✓</div>Tài xế thân thiện, đúng giờ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Xe Nhà <span>Riêng Tư</span></div>
+  <div class="footer-note">© 2025 · 0938 547 985 · TP. Hồ Chí Minh</div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-cta">
+  <a href="https://zalo.me/0938547985" target="_blank" rel="noopener noreferrer" class="float-btn float-zalo">
+    <span class="float-icon">💬</span><span>Zalo</span>
+  </a>
+  <a href="tel:0938547985" class="float-btn float-call">
+    <span class="float-icon">📞</span><span>Gọi ngay</span>
+  </a>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
